@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Biblioteca - Spotify</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+    <script defer src="scripts/script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Tu Biblioteca</h1>
+        <input type="text" placeholder="Buscar canciones, artistas...">
+    </header>
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Buscar.html">Buscar</a></li>
+                <li><a href="TuBiblioteca.html">Tu Biblioteca</a></li>
+                <li><a href="Playlist.html">Playlist</a></li>
+            </ul>
+        </nav>
+        <main class="main-content">
+            <h2>Las canciones que te gustan</h2>
+            <div class="playlist">
+                <div class="card" data-index="0">
+                    <img src="images/eladio_carrion_3men2_kbrn-portada.jpg" alt="Portada de la canción">
+                    <h3>Padre tiempo</h3>
+                    <p>Eladio Carrión</p>
+                </div>
+                <div class="card" data-index="1">
+                    <img src="images/post-malone-cd.jpg" alt="Portada de la canción">
+                    <h3>Overnow</h3>
+                    <p>Post Malone</p>
+                </div>
+                <div class="card" data-index="2">
+                    <img src="images/post_malone_hollywoods_bleeding-portada.jpg" alt="Portada de la canción">
+                    <h3>Myself</h3>
+                    <p>Post Malone</p>
+                </div>
+                <div class="card" data-index="3">
+                    <img src="images/feid_sixdo-portada.jpg" alt="Portada de la canción">
+                    <h3>Chorrito pa las animas</h3>
+                    <p>Feid</p>
+                </div>
+                <div class="card" data-index="4">
+                    <img src="images/araña.jpg" alt="Portada de la canción">
+                    <h3>I Am Dreaming</h3>
+                    <p>Metro Boomin</p>
+                </div>
+                <div class="card" data-index="5">
+                    <img src="images/rewind.jpg" alt="Portada de la canción">
+                    <h3>Rewind</h3>
+                    <p>Blxst ft Feid</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2024 Spotify</p>
+    </footer>
+    <div id="player">
+        <button id="toggle-player"><i class="fas fa-chevron-up"></i></button>
+        <div id="player-content" class="hidden">
+            <canvas id="equalizer" width="600" height="100"></canvas>
+            <div id="player-controls">
+                <button id="prev"><i class="fas fa-backward"></i></button>
+                <button id="play-pause"><i class="fas fa-play"></i></button>
+                <button id="next"><i class="fas fa-forward"></i></button>
+            </div>
+            <div id="player-info">
+                <img id="current-song-image" src="" alt="Portada de la canción">
+                <span id="current-song">No song playing</span>
+            </div>
+            <div id="progress-control">
+                <input type="range" id="progress-slider" min="0" max="100" step="1" value="0">
+            </div>
+            <div id="volume-control">
+                <i id="mute-toggle" class="fas fa-volume-up"></i>
+                <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,226 @@
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif; /* Fuente de la página */
+    margin: 0; /* Elimina el margen predeterminado */
+    padding: 0; /* Elimina el relleno predeterminado */
+    background-color: #f4f4f4; /* Color de fondo de la página */
+}
+
+header {
+    background-color: #1db954; /* Color de fondo del encabezado */
+    color: white; /* Color del texto del encabezado */
+    padding: 20px; /* Relleno del encabezado */
+    text-align: center; /* Alineación del texto al centro */
+}
+
+header input {
+    width: 80%; /* Ancho del campo de entrada */
+    padding: 10px; /* Relleno del campo de entrada */
+    margin-top: 10px; /* Margen superior del campo de entrada */
+    border: none; /* Sin borde */
+    border-radius: 20px; /* Bordes redondeados */
+}
+
+.container {
+    display: flex; /* Usa flexbox para el diseño */
+}
+
+.sidebar {
+    width: 200px; /* Ancho de la barra lateral */
+    background-color: #282828; /* Color de fondo de la barra lateral */
+    color: white; /* Color del texto de la barra lateral */
+    padding: 20px; /* Relleno de la barra lateral */
+}
+
+.sidebar ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Sin relleno */
+}
+
+.sidebar ul li {
+    margin: 20px 0; /* Margen superior e inferior de los elementos de la lista */
+}
+
+.sidebar ul li a {
+    color: white; /* Color del texto de los enlaces */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.main-content {
+    flex-grow: 1; /* Permite que el contenido principal crezca para llenar el espacio disponible */
+    padding: 20px; /* Relleno del contenido principal */
+}
+
+h2 {
+    color: #1db954; /* Color del texto de los encabezados */
+}
+
+/* Estilos de la Lista de Reproducción */
+.playlist {
+    display: flex; /* Usa flexbox para el diseño */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+    gap: 20px; /* Espacio entre los elementos */
+}
+
+.card {
+    background-color: white; /* Color de fondo de las tarjetas */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra de las tarjetas */
+    overflow: hidden; /* Oculta el contenido que se desborda */
+    width: calc(25% - 20px); /* Ancho de las tarjetas */
+    transition: transform 0.3s; /* Transición suave para la transformación */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Escala las tarjetas al pasar el ratón */
+}
+
+.card img {
+    width: 100%; /* Ancho completo de las imágenes */
+    height: auto; /* Altura automática para mantener la proporción */
+    border-radius: 10px 10px 0 0; /* Bordes redondeados en la parte superior */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+}
+
+.card h3, .card p {
+    margin: 10px; /* Margen de los encabezados y párrafos dentro de las tarjetas */
+}
+
+/* Estilos del Ecualizador */
+canvas#equalizer {
+    display: block; /* Muestra el canvas como un bloque */
+    margin: 10px auto; /* Margen superior e inferior de 10px, centrado horizontalmente */
+    background-color: #000; /* Color de fondo del ecualizador */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Estilos del Pie de Página */
+footer {
+    background-color: #b91d1d; /* Color de fondo del pie de página */
+    text-align: center; /* Alineación del texto al centro */
+    padding: 10px; /* Relleno del pie de página */
+    color: white; /* Color del texto del pie de página */
+}
+
+/* Estilos del Reproductor */
+#player {
+    position: fixed; /* Fija el reproductor en la parte inferior de la página */
+    bottom: 0; /* Posición en la parte inferior */
+    width: 100%; /* Ancho completo */
+    background-color: #282828; /* Color de fondo del reproductor */
+    color: white; /* Color del texto del reproductor */
+    display: flex; /* Usa flexbox para el diseño */
+    flex-direction: column; /* Dirección de los elementos en columna */
+    align-items: center; /* Alinea los elementos al centro horizontalmente */
+    padding: 10px 20px; /* Relleno del reproductor */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5); /* Sombra del reproductor */
+}
+
+#player-controls {
+    display: flex; /* Usa flexbox para el diseño */
+    align-items: center; /* Alinea los elementos al centro verticalmente */
+    margin-bottom: 10px; /* Margen inferior para separar los controles del resto del reproductor */
+}
+
+#player-controls button {
+    background: none; /* Sin fondo */
+    border: none; /* Sin borde */
+    color: white; /* Color del texto de los botones */
+    font-size: 20px; /* Tamaño de la fuente de los botones */
+    margin: 0 5px; /* Margen horizontal de los botones */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+    transition: transform 0.3s; /* Transición suave para la transformación */
+}
+
+#player-controls button:hover {
+    transform: scale(1.2); /* Escala los botones al pasar el ratón */
+}
+
+#player-info {
+    display: flex; /* Usa flexbox para el diseño */
+    align-items: center; /* Alinea los elementos al centro verticalmente */
+    margin-bottom: 10px; /* Margen inferior para separar la información del resto del reproductor */
+}
+
+#player-info img {
+    width: 40px; /* Ancho de la imagen de la canción */
+    height: 40px; /* Altura de la imagen de la canción */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-right: 10px; /* Margen derecho de la imagen */
+}
+
+#player-info span {
+    display: block; /* Muestra el span como un bloque */
+    font-size: 14px; /* Tamaño de la fuente del texto */
+    color: #b3b3b3; /* Color del texto */
+}
+
+#player-info span#current-song {
+    font-size: 16px; /* Tamaño de la fuente del texto de la canción actual */
+    color: white; /* Color del texto de la canción actual */
+}
+
+#progress-control {
+    width: 100%; /* Ancho completo del control de progreso */
+    margin: 10px 0; /* Margen superior e inferior */
+}
+
+#progress-slider {
+    width: 100%; /* Ancho completo del control deslizante de progreso */
+    background: #ff0000; /* Color de fondo rojo */
+    height: 5px; /* Altura de la barra */
+    border-radius: 5px; /* Bordes redondeados */
+    outline: none; /* Sin contorno */
+}
+
+#progress-slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Elimina el estilo predeterminado en WebKit */
+    appearance: none; /* Elimina el estilo predeterminado */
+    width: 15px; /* Ancho del pulgar */
+    height: 15px; /* Altura del pulgar */
+    background: #ff0000; /* Color de fondo rojo */
+    border-radius: 50%; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+}
+
+#progress-slider::-moz-range-thumb {
+    width: 15px; /* Ancho del pulgar */
+    height: 15px; /* Altura del pulgar */
+    background: #ff0000; /* Color de fondo rojo */
+    border-radius: 50%; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+}
+
+#volume-control {
+    display: flex; /* Usa flexbox para el diseño */
+    align-items: center; /* Alinea los elementos al centro verticalmente */
+}
+
+#volume-slider {
+    width: 80px; /* Ancho del control deslizante de volumen */
+    margin-left: 10px; /* Margen izquierdo del control deslizante */
+    -webkit-appearance: none; /* Elimina el estilo predeterminado en WebKit */
+    appearance: none; /* Elimina el estilo predeterminado */
+    background: #ff0000; /* Color de fondo rojo */
+    height: 5px; /* Altura de la barra */
+    border-radius: 5px; /* Bordes redondeados */
+    outline: none; /* Sin contorno */
+}
+
+#volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Elimina el estilo predeterminado en WebKit */
+    appearance: none; /* Elimina el estilo predeterminado */
+    width: 15px; /* Ancho del pulgar */
+    height: 15px; /* Altura del pulgar */
+    background: #ff0000; /* Color de fondo rojo */
+    border-radius: 50%; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+}
+
+#volume-slider::-moz-range-thumb {
+    width: 15px; /* Ancho del pulgar */
+    height: 15px; /* Altura del pulgar */
+    background: #ff0000; /* Color de fondo rojo */
+    border-radius: 50%; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+}
